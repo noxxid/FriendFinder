@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>The test begins..</h2>
+        <hr>
+        <form action="/api/friends" method="post" id="myForm">
+            <strong>
+                <h2>Lets get your info</h2>
+            </strong>
+            <h5>Name (required)</h5>
+            <input type="text" name="name" class="form-control" required>
+            <h5>Please insert photo</h5>
+            <input type="text" name="photo" class="form-control" required>
+            <hr>
+            <strong>
+                <h5>Question 1</h5>
+            </strong>
+            <h6>You would much rather stay at home then go out on the weekend</h6>
+
+            <select name="scores" id="q1">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>You would rather see a movie then go to a bar</h6>
+
+            <select name="scores" id="q2">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>You prefer dogs over cats</h6>
+
+            <select name="scores" id="q3">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>How important to you is being physically fit?</h6>
+
+            <select name="scores" id="q4">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>How important to you is your alone time?</h6>
+
+            <select name="scores" id="q5">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>You have a high sex drive:</h6>
+
+            <select name="scores" id="q6">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>You prefer somebody with a great sense of humor then someone who has their life together</h6>
+
+            <select name="scores" id="q7">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>How likely are you to leave somebody behind if they are slowing you down?</h6>
+
+            <select name="scores" id="q8">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>How likely are you to leave somebody behind if they are slowing you down?</h6>
+
+            <select name="scores" id="q9">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <h6>How likely are you to leave somebody behind if they are slowing you down?</h6>
+
+            <select name="scores" id="q10">
+                <option value></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <br>
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+        </form>
+
+        <br>
+        <br>
+
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">Api friends list</a>
+                    |
+                    <a href="git@github.com:noxxid/FriendFinder.git">Git hub repo</a></p>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript">
+
+            // function submitFunction() {
+            //     alert("Your info has been submitted");
+
+            //     document.getElementById("myForm").reset();
+
+
+
+            //     // var frm = document.getElementById('questionForm')[0];
+            //     // frm.submit();
+            //     // frm.reset();
+            //     // return false;
+            // };
+
+
+        </script>
+
+</body>
+
+</html>
